@@ -10,3 +10,5 @@ The task was to create a bot, which would welcome the user only if he or she sen
   2) Question Answering: retrieval of question intend with text summarization model `google/pegasus-xsum`, applying Sentence Transformers `all-mpnet-base-v2` and cosine similarity for comparing questions with the given context, information retrieval with BERT model, pre-trained on SQUAD2 Dataset `deepset/bert-base-cased-squad2` for answering the question
   3) Natural Language Generation: using `microsoft/DialoGPT-medium` to generate text
   4) Development of an end-user Dialog System, that can perform the conversion using models decribed above
+
+![](https://github.com/Teasotea/DialogSystem/blob/main/img/chatbot_results.png?raw=true)
