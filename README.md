@@ -14,7 +14,6 @@ The task was to create a bot, which would welcome the user only if he or she sen
   3) Natural Language Generation: using `microsoft/DialoGPT-medium` to generate text
   4) Development of an end-user Dialog System, that can perform the conversion using models decribed above
 
-
 ## Datasets
 1) For the task of One-Class Classification, 2 datasets were created: '[Greetings](https://github.com/Teasotea/DialogSystem/blob/main/data/greet.csv)' and '[Goodbyes](https://raw.githubusercontent.com/Teasotea/DialogSystem/main/data/goodbyes.csv)'. They consist of common expressions of greetings and farewells. To improve the performance of the model, the datasets could be extended.
 2) For the QA part in is used the [dataset](https://raw.githubusercontent.com/Kizuna-Cheng/Data_Science_Interviews_NLP/main/data.csv) of Data Science interview questions. It has only 323 rows. For future improvements to the information retrieval part of the project, it is worthy to find a bigger one.
@@ -37,6 +36,9 @@ P.S. To make transformer models more specific to our use case, it is worthy to f
 
 ## Notebooks
 * [`ConversationalAI.ipynb`](https://github.com/Teasotea/DialogSystem/blob/main/ConversationalAI.ipynb) ([nbviewer](https://github.com/Teasotea/DialogSystem/blob/main/ConversationalAI.ipynb)) - Notebook version, in which Text Summarization Model wasn't used: it works a little bit faster, but less accurate in searching for answers.
-* [`ConversationalAI_v2.ipynb`](https://github.com/Teasotea/DialogSystem/blob/main/ConversationalAI_v2.ipynb) ([nbviewer](https://github.com/Teasotea/DialogSystem/blob/main/ConversationalAI_v2.ipynb)) -  Notebook version, with `pegasus-xsum` Text Summarization Model. The bot works a little bit slower, but performs better with Text Similarity task. Text Summarisation Model extracts the core idea of message, which solves the problem of comparing different sentences with similar meaning: `What does linear regression stand for?`, `What is linear regression`. `Tell me pls, what is linear regression?`
+* [`ConversationalAI_v2.ipynb`](https://github.com/Teasotea/DialogSystem/blob/main/ConversationalAI_v2.ipynb) ([nbviewer](https://github.com/Teasotea/DialogSystem/blob/main/ConversationalAI_v2.ipynb)) -  Notebook version, with `pegasus-xsum` Text Summarization Model. The bot works a little bit slower, but performs better with Text Similarity task.
 
-![](https://github.com/Teasotea/DialogSystem/blob/main/img/greeting_cl_example.png)
+Text Summarisation Model extracts the core idea of message, which solves the problem of comparing different sentences with similar meaning:
+`What does linear regression stand for?`
+`What is linear regression`
+`Tell me pls, what is linear regression?`
