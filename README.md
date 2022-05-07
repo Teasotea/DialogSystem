@@ -34,7 +34,7 @@ P.S. To make transformer models more specific to our use case, it is worthy to f
 5) Check whether the Data Science interview questions database has a similar question (by building word embeddings with the `Sentence Transformers` model and comparing questions with `cosine similarity`). 
 6) If the user's input is a question from the base - call the answer_with_BERT() function and perform the information retrieval (with Bert, pre-trained on SQUAD dataset `bert-base-cased-squad2`)
 7) If a similar question to the input is not found in the base - tokenize it, save it in history_ids, and launch the `DialoGPT` model to generate the answer
-8)Repeat steps until the intention to quit found
+8) Repeat steps until the intention to quit found
 
 
 
