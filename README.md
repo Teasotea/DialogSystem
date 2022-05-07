@@ -14,4 +14,9 @@ The task was to create a bot, which would welcome the user only if he or she sen
   3) Natural Language Generation: using `microsoft/DialoGPT-medium` to generate text
   4) Development of an end-user Dialog System, that can perform the conversion using models decribed above
 
+## Used Datasets
+1) For the task of One-Class Classification, 2 datasets were created: '[Greetings](https://github.com/Teasotea/DialogSystem/blob/main/data/greet.csv)' and '[Goodbyes](https://raw.githubusercontent.com/Teasotea/DialogSystem/main/data/goodbyes.csv)'. They consist of common expressions of greetings and farewells. To improve the performance of the model, the datasets could be extended.
+2) For the QA part in is used the [dataset](https://raw.githubusercontent.com/Kizuna-Cheng/Data_Science_Interviews_NLP/main/data.csv) of Data Science interview questions. It has only 323 rows. For future improvements to the information retrieval part of the project, it is worthy to find a bigger one.
+P.S. To make transformer models more specific to our use case, it is worthy to fine-tune them on datasets related to computer science topics. It can be also a scrapped Quora/Stackoverflow questions and answers.
+
  ![](https://github.com/Teasotea/DialogSystem/blob/main/img/greeting_cl_example.png)
