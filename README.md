@@ -14,10 +14,26 @@ The task was to create a bot, which would welcome the user only if he or she sen
   3) Natural Language Generation: using `microsoft/DialoGPT-medium` to generate text
   4) Development of an end-user Dialog System, that can perform the conversion using models decribed above
 
-## Used Datasets
+## Datasets
 1) For the task of One-Class Classification, 2 datasets were created: '[Greetings](https://github.com/Teasotea/DialogSystem/blob/main/data/greet.csv)' and '[Goodbyes](https://raw.githubusercontent.com/Teasotea/DialogSystem/main/data/goodbyes.csv)'. They consist of common expressions of greetings and farewells. To improve the performance of the model, the datasets could be extended.
 2) For the QA part in is used the [dataset](https://raw.githubusercontent.com/Kizuna-Cheng/Data_Science_Interviews_NLP/main/data.csv) of Data Science interview questions. It has only 323 rows. For future improvements to the information retrieval part of the project, it is worthy to find a bigger one.
 
 P.S. To make transformer models more specific to our use case, it is worthy to fine-tune them on datasets related to computer science topics. It can be also a scrapped Quora/Stackoverflow questions and answers.
 
  ![](https://github.com/Teasotea/DialogSystem/blob/main/img/greeting_cl_example.png)
+
+## Implementation
+
+1) Wait for the user's input to start the conversation
+2) Classify whether the message has the intention to end the conversation with the `OneClassSVM` model: if yes - the chat ends. 
+3) Classify whether the message is a greeting with the `OneClassSVM` model: if yes - randomly choose 1 of 4 sentences and say 'hello'
+4) If the message is not a greeting - extract the main idea of the sentence with `pegasus-xsum` summarization model. It helps to reduce redundant words, which make text search for similar sentences more difficult.
+5) Check whether the Data Science interview questions database has a similar question (by building word embeddings with the `Sentence Transformers` model and comparing questions with `cosine similarity`). 
+6) If the user's input is a question from the base - call the answer_with_BERT() function and perform the information retrieval (with Bert, pre-trained on SQUAD dataset `bert-base-cased-squad2`)
+7) If a similar question to the input is not found in the base - tokenize it, save it in history_ids, and launch the `DialoGPT` model to generate the answer
+8)Repeat steps until the intention to quit found
+
+ ![](https://github.com/Teasotea/DialogSystem/blob/main/img/chatbot_diagram.png)
+
+
+
