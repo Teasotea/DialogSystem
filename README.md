@@ -24,6 +24,8 @@ P.S. To make transformer models more specific to our use case, it is worthy to f
 
 ## Implementation
  ![](https://github.com/Teasotea/DialogSystem/blob/main/img/chatbot_diagram.png)
+ 
+How does class ChatBot work?
 
 1) Wait for the user's input to start the conversation
 2) Classify whether the message has the intention to end the conversation with the `OneClassSVM` model: if yes - the chat ends. 
