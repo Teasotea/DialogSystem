@@ -1,5 +1,5 @@
 # Conversational Bot, that will answer your Data Science interview questions :)
-Dialog System, that performs One-Class Classification, Question Answering, Sentence Similarity, Text Summarization, and Natural Language Generation tasks
+Dialog System, that performs One-Class Classification, Question Answering, Sentence Similarity, and Natural Language Generation tasks
 
 ![](https://github.com/Teasotea/DialogSystem/blob/main/img/chatbot_results.png)
 
