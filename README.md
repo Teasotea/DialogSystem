@@ -31,13 +31,13 @@ How does class ChatBot work?
 2) Classify whether the message has the intention to end the conversation with the `OneClassSVM` model: if yes - the chat ends. 
 3) Classify whether the message is a greeting with the `OneClassSVM` model: if yes - randomly choose 1 of 4 sentences and say 'hello'
 4) If the message is not a greeting - extract the main idea of the sentence with `pegasus-xsum` summarization model. It helps to reduce redundant words, which make text search for similar sentences more difficult.
-5) Check whether the Data Science interview questions database has a similar question (by building word embeddings with the `Sentence Transformers` model and comparing questions with `cosine similarity`). 
+5) Check whether the Data Science interview questions database has a similar question (by building word embeddings with the `Sentence Transformers` model and comparing questions with `Cosine Similarity`). 
 6) If the user's input is a question from the base - call the answer_with_BERT() function and perform the information retrieval (with Bert, pre-trained on SQUAD dataset `bert-base-cased-squad2`)
 7) If a similar question to the input is not found in the base - tokenize it, save it in history_ids, and launch the `DialoGPT` model to generate the answer
 8) Repeat steps until the intention to quit found
 
 ## Notebooks
-* [`ConversationalAI.ipynb`](https://github.com/Teasotea/DialogSystem/blob/main/ConversationalAI.ipynb) ([nbviewer](https://github.com/Teasotea/DialogSystem/blob/main/ConversationalAI.ipynb)) - Notebook version, in which Text Summarization Model wasn't used and function for computing sentence embeddings wasn't optimized: it is less accurate and works slower. There is also research, like trials of 3 ways of comparing sentence similarities: *Levenshtein Distance*, *Jaccard Distance*, and *cosine similarity* (that was chosen for the final realization of tasks)
+* [`ConversationalAI.ipynb`](https://github.com/Teasotea/DialogSystem/blob/main/ConversationalAI.ipynb) ([nbviewer](https://github.com/Teasotea/DialogSystem/blob/main/ConversationalAI.ipynb)) - Notebook version, in which Text Summarization Model wasn't used and function for computing sentence embeddings wasn't optimized: it is less accurate and works slower. There is also research, like trials of 3 ways of comparing sentence similarities: *Levenshtein Distance*, *Jaccard Distance*, and Ccosine Similarity* (that was chosen for the final realization of tasks)
 * [`ConversationalAI_v2.ipynb`](https://github.com/Teasotea/DialogSystem/blob/main/ConversationalAI_v2.ipynb) ([nbviewer](https://github.com/Teasotea/DialogSystem/blob/main/ConversationalAI_v2.ipynb)) -  Notebook version, with `pegasus-xsum` Text Summarization Model and loaded pre-built sentence embeddings for DS interview questions dataset `sentence-transformers_embeddings_qa_data.pkl` and Classification Models `model_greet.pkl`, `model_bye.pkl`  from the previous notebook.
 
 Text Summarisation Model extracts the core idea of message, which solves the problem of comparing different sentences with similar meaning:
