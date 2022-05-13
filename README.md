@@ -44,3 +44,5 @@ Text Summarisation Model extracts the core idea of message, which solves the pro
 `What does linear regression stand for?`
 `What is linear regression`
 `Tell me pls, what is linear regression?`
+
+ ![](https://github.com/Teasotea/DialogSystem/blob/main/img/ds_conversation2.jpg)
