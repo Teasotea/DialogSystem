@@ -37,8 +37,8 @@ How does class ChatBot work?
 8) Repeat steps until the intention to quit found
 
 ## Notebooks
-* [`ConversationalAI.ipynb`](https://github.com/Teasotea/DialogSystem/blob/main/ConversationalAI.ipynb) ([nbviewer](https://github.com/Teasotea/DialogSystem/blob/main/ConversationalAI.ipynb)) - Notebook version, in which Text Summarization Model wasn't used: it works a little bit faster, but less accurate in searching for answers.
-* [`ConversationalAI_v2.ipynb`](https://github.com/Teasotea/DialogSystem/blob/main/ConversationalAI_v2.ipynb) ([nbviewer](https://github.com/Teasotea/DialogSystem/blob/main/ConversationalAI_v2.ipynb)) -  Notebook version, with `pegasus-xsum` Text Summarization Model. The bot works a little bit slower, but performs better with Text Similarity task.
+* [`ConversationalAI.ipynb`](https://github.com/Teasotea/DialogSystem/blob/main/ConversationalAI.ipynb) ([nbviewer](https://github.com/Teasotea/DialogSystem/blob/main/ConversationalAI.ipynb)) - Notebook version, in which Text Summarization Model wasn't used and function for computing Sentence Embeddings wasn't optimized: it is less accurate and works slower
+* [`ConversationalAI_v2.ipynb`](https://github.com/Teasotea/DialogSystem/blob/main/ConversationalAI_v2.ipynb) ([nbviewer](https://github.com/Teasotea/DialogSystem/blob/main/ConversationalAI_v2.ipynb)) -  Notebook version, with `pegasus-xsum` Text Summarization Model and loaded pre-built Sentence Embeddings and Classification Models from pickles. The bot performs better with Text Similarity task. 
 
 Text Summarisation Model extracts the core idea of message, which solves the problem of comparing different sentences with similar meaning:
 `What does linear regression stand for?`
