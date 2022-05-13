@@ -38,7 +38,7 @@ How does class ChatBot work?
 
 ## Notebooks
 * [`ConversationalAI.ipynb`](https://github.com/Teasotea/DialogSystem/blob/main/ConversationalAI.ipynb) ([nbviewer](https://github.com/Teasotea/DialogSystem/blob/main/ConversationalAI.ipynb)) - Notebook version, in which Text Summarization Model wasn't used and function for computing sentence embeddings wasn't optimized: it is less accurate and works slower. There is also research, like trials of 3 ways of comparing sentence similarities: Levenshtein Distance, Jaccard Distance, and Cosine Similarity (that was chosen for the final realization of tasks)
-* [`ConversationalAI_v2.ipynb`](https://github.com/Teasotea/DialogSystem/blob/main/ConversationalAI_v2.ipynb) ([nbviewer](https://github.com/Teasotea/DialogSystem/blob/main/ConversationalAI_v2.ipynb)) -  Notebook version, with `pegasus-xsum` Text Summarization Model and loaded pre-built Sentence Embeddings and Classification Models from pickles. The bot performs better with Text Similarity task. 
+* [`ConversationalAI_v2.ipynb`](https://github.com/Teasotea/DialogSystem/blob/main/ConversationalAI_v2.ipynb) ([nbviewer](https://github.com/Teasotea/DialogSystem/blob/main/ConversationalAI_v2.ipynb)) -  Notebook version, with `pegasus-xsum` Text Summarization Model and loaded pre-built sentence embeddings for DS interview questions dataset `sentence-transformers_embeddings_qa_data.pkl` and Classification Models `model_greet.pkl`, `model_bye.pkl`  from the previous notebook.
 
 Text Summarisation Model extracts the core idea of message, which solves the problem of comparing different sentences with similar meaning:
 `What does linear regression stand for?`
